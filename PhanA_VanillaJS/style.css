@@ -1,0 +1,94 @@
+:root {
+  --bg-color: #f4f4f9;
+  --text-color: #333;
+  --card-bg: #fff;
+  --border: #ccc;
+}
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #f4f4f9;
+  --card-bg: #1e1e1e;
+  --border: #444;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  transition: 0.3s;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #007bff;
+  color: white;
+}
+
+.toolbar,
+.status {
+  padding: 1rem 2rem;
+}
+.container {
+  display: flex;
+  gap: 2rem;
+  padding: 0 2rem;
+  flex-wrap: wrap;
+}
+
+.book-list {
+  flex: 3;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cột trên PC */
+  gap: 1rem;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-container {
+  flex: 1;
+  background: var(--card-bg);
+  padding: 1rem;
+  border-radius: 8px;
+  min-width: 250px;
+  height: fit-content;
+}
+
+.input-group {
+  margin-bottom: 1rem;
+}
+input,
+select {
+  width: 100%;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+.error {
+  color: red;
+  font-size: 0.8rem;
+  display: block;
+  height: 15px;
+}
+button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .book-list {
+    grid-template-columns: 1fr;
+  }
+  .container {
+    flex-direction: column-reverse;
+  }
+}

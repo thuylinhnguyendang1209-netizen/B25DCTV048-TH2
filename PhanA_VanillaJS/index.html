@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thư Viện Sách</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Thư Viện Của Lớp</h1>
+      <div class="header-actions">
+        <span id="fav-count">Yêu thích: 0</span>
+        <button id="theme-toggle">Sáng/Tối</button>
+        <!-- Yêu cầu nâng cao -->
+      </div>
+    </header>
+
+    <div class="toolbar">
+      <input
+        type="text"
+        id="search-input"
+        placeholder="Tìm kiếm theo tên sách..."
+      />
+      <select id="genre-filter">
+        <option value="">Tất cả thể loại</option>
+      </select>
+    </div>
+
+    <div class="status" id="status-text">Đang tải...</div>
+
+    <main class="container">
+      <section class="book-list" id="book-list"></section>
+
+      <aside class="form-container">
+        <h2>Thêm Sách Mới</h2>
+        <form id="add-book-form">
+          <div class="input-group">
+            <input type="text" id="title" placeholder="Tên sách (từ 3 ký tự)" />
+            <span class="error" id="title-error"></span>
+          </div>
+          <div class="input-group">
+            <input type="text" id="author" placeholder="Tác giả (Bắt buộc)" />
+            <span class="error" id="author-error"></span>
+          </div>
+          <div class="input-group">
+            <input type="text" id="genre" placeholder="Thể loại (Bắt buộc)" />
+            <span class="error" id="genre-error"></span>
+          </div>
+          <div class="input-group">
+            <input
+              type="number"
+              id="year"
+              placeholder="Năm xuất bản (1900 - nay)"
+            />
+            <span class="error" id="year-error"></span>
+          </div>
+          <button type="submit">Thêm sách</button>
+        </form>
+      </aside>
+    </main>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
